@@ -1,6 +1,14 @@
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
     background: $color-white;
+    z-index: 999;
     height: 100rem;
+
+    transition: 0.5s;
 
     .h_inner {
         position: relative;
@@ -201,4 +209,9 @@
             border-radius: 10rem;
         }
     }
+}
+
+.header.on {
+    background: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid #ddd;
 }

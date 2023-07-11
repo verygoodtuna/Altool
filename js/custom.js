@@ -1,4 +1,12 @@
 $(function () {
+
+    $(window).on('scroll', function () {
+        let sct = $(window).scrollTop();
+        sct > 0
+            ? $('.header').addClass('on')
+            : $('.header').removeClass('on');
+    });
+
     const MajorSlide = new Swiper ('.major_slide', {
         loop: true,
         parallax: true,

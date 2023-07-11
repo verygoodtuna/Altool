@@ -8,7 +8,7 @@
 // 헤더
 @import './header';
 
-//메인
+//메인 페이지
 @import './main_major';
 @import './main_banner';
 @import './main_egg';
@@ -17,6 +17,9 @@
 @import './main_product';
 @import './main_tip';
 @import './main_news';
+
+//서브 페이지
+@import './sub_login';
 
 //푸터
 @import './ft_top';

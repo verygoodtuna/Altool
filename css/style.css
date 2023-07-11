@@ -47,8 +47,14 @@ em, i, address {
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   background: #fff;
+  z-index: 999;
   height: 100rem;
+  transition: 0.5s;
 }
 .header .h_inner {
   position: relative;
@@ -214,8 +220,13 @@ em, i, address {
   border-radius: 10rem;
 }
 
+.header.on {
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid #ddd;
+}
+
 .main_major {
-  padding: 0 40rem;
+  padding: 100rem 40rem 0 40rem;
 }
 .main_major .major_slide {
   overflow-x: hidden;
@@ -637,6 +648,25 @@ em, i, address {
   display: flex;
   flex-direction: column;
   gap: 5rem;
+}
+
+.main_login {
+  padding: 100rem 0;
+}
+.main_login .inner {
+  max-width: 1200rem;
+  margin: 0 auto;
+  padding: 0 15rem;
+  position: relative;
+  height: calc(100vh - 403rem);
+}
+.main_login .inner .login_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
 }
 
 .footer {

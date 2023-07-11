@@ -1,0 +1,15 @@
+.main_login {
+    padding: 100rem 0;
+    
+    .inner {
+        @include inner();
+        position: relative;
+        height: calc(100vh - 403rem);
+
+        .login_box {
+            @include position_center();
+            text-align: center;
+            width: 100%;
+        }
+    }
+}
