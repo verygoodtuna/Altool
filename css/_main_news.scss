@@ -1,0 +1,51 @@
+.main_news {
+    padding: 50rem 0;
+    
+    
+    .inner {
+        background: url(../imges/mn01.png)no-repeat center center/cover;
+        min-height: 300rem;
+        position: relative;
+
+        .news_box {
+            @include inner();
+            @include position_center();
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20rem;
+
+            .news {
+                display: flex;
+                align-items: center;
+                gap: 20rem;
+                background: $color-white;
+                border-radius: 10rem;
+                padding: 25rem;
+                min-height: 150rem;
+
+                .icon {
+                    padding: 10rem 15rem;
+                    background: $color-white;
+                    border: 2rem solid $color-black;
+                    border-radius: 8rem;
+                    font-size: 16rem;
+                    font-weight: 500;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                p {
+                    flex-direction: column;
+                    gap: 5rem;
+                    span {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

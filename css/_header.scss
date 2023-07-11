@@ -1,0 +1,204 @@
+.header {
+    background: $color-white;
+    height: 100rem;
+
+    .h_inner {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        padding: 0 60rem;
+        height: 100%;
+
+        .logo {
+            &>img {
+                position: absolute;
+                top: 50%;
+                left: 60rem;
+                transform: translate(0, -50%);
+            }
+        }
+    
+        .gnb {
+            &>ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+            gap: 30rem;
+            height: 100rem;
+                
+                &>li {
+                    font-size: 15rem;
+                    font-weight: 500;
+                    color: $color-black;
+                    position: relative;
+                    height: 100rem;
+                    display: flex;
+                    align-items: center; 
+
+                    &>a {
+                        padding: 15rem 15rem;
+                    }
+
+                    &:hover .gnb_a {
+                        background: rgba(0, 0, 0, 0.05);
+                        border-radius: 10rem;
+                    }
+
+                    .lnb{
+                       display: none;
+                       
+                       position: absolute;
+                       top: 75rem;
+                       left: 0;
+                       width: 800rem; 
+                       background: $color-white; 
+                       border-radius: 10rem;   
+                        padding: 30rem 30rem 30rem 30rem;
+                       z-index: 999;
+                        box-shadow: 0 0 1px rgba(0,0,0,.25),
+                        0 8px 20px rgba(0,0,0,.15);
+                        
+
+                        .l_top {
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 30rem;
+
+                            h3 {
+                                font-size: 12rem;
+                                font-weight: 500;
+                                color: $color-gray;
+                                margin: 0 0 10rem 15rem;
+                            }
+
+                            .security {
+                                margin-top: 60rem;
+                            }
+
+                            .egg {
+                                display: flex;
+                                gap: 10rem;
+                                margin-bottom: 10rem;
+                                padding: 10rem 15rem;
+
+                                img {
+                                    width: 40rem;
+                                    height: 40rem;
+                                    border-radius: 8rem;
+                                }
+
+                                dl {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: space-evenly;
+                                    height: 40rem;
+
+                                    dt {
+                                        font-size: 13rem;
+                                        font-weight: 500;
+                                        color: $color-black;
+                                    }
+
+                                    dd {
+                                        font-size: 12rem;
+                                        font-weight: 300;
+                                        color: $color-gray;
+                                    }
+                                }
+                            
+                            }
+
+                            .egg:hover {
+                                background: rgba(0, 0, 0, 0.05);
+                                border-radius: 10rem;
+                            }
+                        }
+    
+                        .l_bottom {
+                            height: 70rem;
+                            background: linear-gradient(90deg,#ff6746,#ff477e);
+                            display: flex;  
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 8rem;
+                            &>a {
+                                color: $color-white;
+                                &>img {
+                                    width: 190rem;
+                                }
+                                &>span {
+                                    font-size: 12rem;
+                                    font-weight: 300;
+                                    margin-left: 25rem;
+                                }
+                                &>strong {
+                                   font-size: 18rem;
+                                   font-weight: 500;
+                                   margin-left: 5rem;
+                                }
+                            }
+                        }
+                    }
+
+                &:hover .lnb {
+                    display: block;
+                }
+                    
+                    .list {
+                        display: none;
+                        position: absolute;
+                        top: 75rem;
+                        left: 0;
+                        z-index: 999;
+
+                        background: $color-white;
+                        border-radius: 10rem;
+                        width: 150rem;
+                        padding: 20rem;
+                        box-shadow: 0 0 1px rgba(0,0,0,.25),
+                        0 8px 20px rgba(0,0,0,.15);
+
+                        &>li {
+                            font-size: 12rem;
+                            color: $color-gray;
+
+                            &>a {
+                                padding: 5rem 15rem;
+                            }
+
+                            &>a:hover {
+                                background: rgba(0, 0, 0, 0.05);
+                                border-radius: 5rem;
+                            }
+                        }
+
+                        &>li:not(:last-child) {
+                            margin-bottom: 15rem;
+                        }
+                    }
+
+                    &:hover .list {
+                        display: block;
+                    }
+                }
+            }
+        }
+    
+        &>span {
+            display: block;
+            
+            position: absolute;
+            top: 50%;
+            right: 60px;
+            transform: translate(0, -50%);
+
+            background: $color-black;
+            color: $color-white;
+            font-size: 16rem;
+            padding: 10rem 15rem;
+            border-radius: 10rem;
+        }
+    }
+}
