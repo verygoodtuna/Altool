@@ -1,0 +1,37 @@
+.ft_middle {
+    padding: 15rem 40rem;
+
+    .inner {
+        display: flex;
+        align-items: center;
+        gap: 30rem;
+
+        .img {
+            width: 72.94rem;
+            height: 20rem;
+            background: url(../imges/est_logo_gray.png)no-repeat center center/cover;
+            transition: 0.3s;
+        }
+
+        .img:hover {
+            background: url(../imges/est_logo_black.png)no-repeat center center/cover;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 15rem;
+
+            li {
+                font-size: 20rem;
+                font-weight: 700;
+                color: $color-gray;
+                transition: 0.3s;
+            }
+
+            li:hover {
+                color: $color-dgray;
+            }
+        }
+    }
+}

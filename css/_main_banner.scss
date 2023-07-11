@@ -34,6 +34,47 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+
+                span {
+                    display: inline-block;
+                    font-size: 16rem;
+                    font-weight: 500;
+                    padding: 10rem 25rem;
+                    //border: 1px solid $color-black;
+                    border-radius: 50rem;
+                    color: $color-black;
+                    background: $color-white;
+                    margin-bottom: 30rem;
+
+                    position: relative;
+                    img {
+                        position: absolute;
+                        top: -32rem;
+                        right: 2rem;
+                        width: 40rem;
+                        height: 40rem;
+                    }
+                }
+
+                h3 {
+                    font-size: 30rem;
+                    font-weight: 700;
+                    color: $color-black;
+                    margin-bottom: 15rem;
+                }
+
+                p {
+                    font-size: 14rem;
+                    font-weight: 400;
+                    color: $color-black;
+                    margin-bottom: 5rem;
+                }
+
+                strong {
+                    font-size: 13rem;
+                    font-weight: 300;
+                    color: $color-black;
+                }
             }
         }
        

@@ -306,6 +306,41 @@ em, i, address {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.main_banner .banner_slide .swiper-wrapper .txt span {
+  display: inline-block;
+  font-size: 16rem;
+  font-weight: 500;
+  padding: 10rem 25rem;
+  border-radius: 50rem;
+  color: #1A1A1A;
+  background: #fff;
+  margin-bottom: 30rem;
+  position: relative;
+}
+.main_banner .banner_slide .swiper-wrapper .txt span img {
+  position: absolute;
+  top: -32rem;
+  right: 2rem;
+  width: 40rem;
+  height: 40rem;
+}
+.main_banner .banner_slide .swiper-wrapper .txt h3 {
+  font-size: 30rem;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 15rem;
+}
+.main_banner .banner_slide .swiper-wrapper .txt p {
+  font-size: 14rem;
+  font-weight: 400;
+  color: #1A1A1A;
+  margin-bottom: 5rem;
+}
+.main_banner .banner_slide .swiper-wrapper .txt strong {
+  font-size: 13rem;
+  font-weight: 300;
+  color: #1A1A1A;
+}
 
 .main_egg {
   padding: 50rem 0 0 0;
@@ -554,7 +589,7 @@ em, i, address {
 }
 
 .main_news {
-  padding: 50rem 0;
+  padding-top: 50rem 0;
 }
 .main_news .inner {
   background: url(../imges/mn01.png) no-repeat center center/cover;
@@ -594,10 +629,150 @@ em, i, address {
   align-items: center;
   justify-content: center;
 }
+.main_news .inner .news_box .news .check {
+  font-size: 26rem;
+  font-weight: 500;
+}
 .main_news .inner .news_box .news p {
+  display: flex;
   flex-direction: column;
   gap: 5rem;
 }
-.main_news .inner .news_box .news p span {
+
+.footer {
+  padding: 30rem 0;
+}
+
+.ft_top {
+  padding: 15rem 40rem 15rem 30rem;
+}
+.ft_top .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ft_top .inner .custom {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10rem;
+}
+.ft_top .inner .custom li {
+  font-size: 14rem;
+  font-weight: 500;
+  color: #8b95a1;
+  padding: 10rem 15rem;
+}
+.ft_top .inner .custom li strong {
+  color: #4e5968;
+  font-size: 14rem;
+  font-weight: 500;
+}
+.ft_top .inner .custom li:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 8rem;
+}
+.ft_top .inner .family {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 5rem 10rem;
+  position: relative;
+  font-size: 14rem;
+  font-weight: 400;
+  color: #8b95a1;
+}
+.ft_top .inner .family .family_list {
+  position: absolute;
+  bottom: 30rem;
+  right: 0;
+  padding: 25rem 20rem;
+  background: #fff;
+  border-radius: 10rem;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.25), 0 8px 20px rgba(0, 0, 0, 0.15);
+  display: none;
+}
+.ft_top .inner .family .family_list li {
+  font-size: 14rem;
+  font-weight: 500;
+  color: #4e5968;
+  line-height: 19rem;
+  padding: 5rem 10rem;
+}
+.ft_top .inner .family .family_list li:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 8rem;
+}
+.ft_top .inner .family .family_list.on {
   display: block;
+}
+.ft_top .inner .family:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 8rem;
+}
+
+.ft_middle {
+  padding: 15rem 40rem;
+}
+.ft_middle .inner {
+  display: flex;
+  align-items: center;
+  gap: 30rem;
+}
+.ft_middle .inner .img {
+  width: 72.94rem;
+  height: 20rem;
+  background: url(../imges/est_logo_gray.png) no-repeat center center/cover;
+  transition: 0.3s;
+}
+.ft_middle .inner .img:hover {
+  background: url(../imges/est_logo_black.png) no-repeat center center/cover;
+}
+.ft_middle .inner ul {
+  display: flex;
+  align-items: center;
+  gap: 15rem;
+}
+.ft_middle .inner ul li {
+  font-size: 20rem;
+  font-weight: 700;
+  color: #8b95a1;
+  transition: 0.3s;
+}
+.ft_middle .inner ul li:hover {
+  color: #4e5968;
+}
+
+.ft_bottom {
+  padding: 15rem 40rem;
+}
+.ft_bottom .address {
+  font-size: 14rem;
+  font-weight: 400;
+  color: #8b95a1;
+  margin-bottom: 10rem;
+}
+.ft_bottom .company {
+  display: flex;
+  gap: 20rem;
+  align-items: center;
+}
+.ft_bottom .company li {
+  font-size: 14rem;
+  font-weight: 400;
+  color: #8b95a1;
+  position: relative;
+}
+.ft_bottom .company li a {
+  color: #08f;
+}
+.ft_bottom .company li ~ li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10rem;
+  transform: translate(0, -50%);
+  width: 1rem;
+  height: 10rem;
+  background: #ddd;
 }/*# sourceMappingURL=style.css.map */

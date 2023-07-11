@@ -13,4 +13,8 @@ $(function () {
     const BannerSlide = new Swiper ('.banner_slide', {
         loop: true,
     });
+
+    $('.footer .family').on('click', function () {
+        $('.footer .family_list').toggleClass('on');
+    })
 })
