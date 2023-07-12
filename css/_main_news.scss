@@ -56,3 +56,15 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .main_news {
+
+        .inner {
+
+            ul {
+                flex-direction: column;
+            }
+        }
+    }
+}

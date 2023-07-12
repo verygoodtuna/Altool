@@ -36,3 +36,13 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .ft_bottom  {
+        .inner {
+            .company {
+                flex-direction: column;
+            }
+        }
+    }
+}

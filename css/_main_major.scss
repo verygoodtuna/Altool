@@ -1,18 +1,13 @@
 .main_major {
-
     padding: 100rem 40rem 0 40rem;
+    position: relative;
 
     .major_slide {
-
+        border-radius: 25rem;
         overflow-x: hidden;
 
         .swiper-wrapper {
-
             height: calc(100vh - 350rem);
-
-            .major {
-                border-radius: 25rem;
-            }
 
             .major01 {
                 background: url(../imges/mm01.png)no-repeat center center/cover;
@@ -68,10 +63,126 @@
                     }
                 }
             }
-        }
-       
+        }      
     }
 
-    
+    .page_btn {
+        display: flex;
+        align-items: center;
+        gap: 10rem;
+
+        max-width: 1200rem;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15rem;
+
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        z-index: 998;
+
+        .pn {
+            font-size: 20rem;
+            font-weight: 500;
+            color: $color-black;
+        }
+
+        .page_num {
+            width: 40rem;
+            font-size: 13rem;
+            font-weight: 400;
+            color: $color-black;
+        }
+
+        .page_play {
+            position: relative;
+            
+            span::before {
+                content: "\ea3e";
+                font-family: xeicon;
+                font-size: 14rem;
+                color: $color-black;
+
+                display: block;
+            }
+            
+            span::before.on {
+                display: none;
+            }
+
+            span::after {
+                content: "\ea3b";
+                font-family: xeicon;
+                font-size: 14rem;
+                color: $color-black;
+
+                display: none;
+            }
+
+            span::after.on {
+                display: block;
+            }
+        }
+    }
    
+}
+
+@media (max-width: 768px) {
+    .main_major {
+        padding: 65rem 20rem 0 20rem;
+
+        .major_slide {
+            border-radius: 15rem;
+
+            .swiper-wrapper {
+                height: calc(100vh - 200rem);
+
+                .major01 {
+                    background: url(../imges/me_r01.png)no-repeat center center/cover;
+                }
+                .major02 {
+                    background: url(../imges/me_r02.png)no-repeat center center/cover;
+                }
+                .major03 {
+                    background: url(../imges/me_r03.png)no-repeat center center/cover;
+                }
+
+                .txt {
+                    top: 30%;
+                    text-align: center;
+                    h2 {
+                        font-size: 20rem;
+                        line-height: 25rem;
+                    }
+
+                    p {
+                        font-size: 12rem;
+                        font-weight: 300;
+                        margin: 0 0 30rem 0;
+                    }
+
+                    span {
+                        font-size: 12rem;
+                        font-weight: 500;
+                        padding: 10rem 20rem;
+
+                        a {
+                            padding: 5rem 15rem;
+                        }
+
+                        i {
+                            font-size: 14rem;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+
+        .page_btn {
+            justify-content: center;
+        }
+    }
 }

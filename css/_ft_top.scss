@@ -97,3 +97,23 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .ft_top {
+
+        .inner {
+            padding: 10rem 0;
+            flex-direction: column;
+    
+            .custom {
+                display: flex;
+                flex-direction: column;
+            }
+    
+            .family {
+                flex-direction: column;
+            }
+        }
+        
+    }
+}

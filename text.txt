@@ -9,6 +9,11 @@ xi-facebook
 xi-mail-o
 xi-plus-min
 
+play \ea3e
+pause \ea3b
+
+@media (max-width: 768px)
+
 swiper-container
 swiper-wrapper
 swiper-slide
