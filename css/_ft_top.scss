@@ -21,6 +21,7 @@
                 font-weight: 500;
                 color: $color-gray;
                 padding: 10rem 15rem;
+                position: relative;
 
                 strong {
                     color: $color-dgray;
@@ -32,6 +33,17 @@
             li:hover {
                 background: rgba(0, 0, 0, 0.05);
                 border-radius: 8rem;
+            }
+
+            li~li::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: -5rem;
+                transform: translate(0, -50%);
+                width: 1rem;
+                height: 10rem;
+                background: #ddd;
             }
         }
 

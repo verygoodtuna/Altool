@@ -360,20 +360,18 @@ em, i, address {
   margin: 0 auto;
   padding: 0 40rem;
 }
-.main_egg ul {
-  display: flex;
-  justify-content: space-between;
-  gap: 15rem;
-}
 .main_egg ul li {
-  padding: 25rem;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.25), 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.25), 0 0 10rem rgba(0, 0, 0, 0.15);
   border-radius: 10rem;
   flex-basis: 100%;
+  margin: 10rem;
 }
 .main_egg ul li a {
   display: flex;
-  gap: 10rem;
+  justify-content: center;
+  align-items: center;
+  gap: 15rem;
+  padding: 20rem;
 }
 .main_egg ul li a img {
   width: 50rem;
@@ -386,15 +384,18 @@ em, i, address {
   gap: 5rem;
 }
 .main_egg ul li a dl dt {
-  font-size: 14rem;
-  font-weight: 500;
+  font-size: 13rem;
+  font-weight: 400;
   color: #1A1A1A;
 }
 .main_egg ul li a dl dd {
-  font-size: 11rem;
+  font-size: 10rem;
   font-weight: 300;
   line-height: 14rem;
   color: #8b95a1;
+}
+.main_egg ul li .draggable {
+  overflow: visible;
 }
 
 .main_service {
@@ -626,19 +627,12 @@ em, i, address {
   gap: 20rem;
   background: #fff;
   border-radius: 10rem;
-  padding: 25rem;
-  min-height: 150rem;
+  padding: 10rem 25rem;
+  min-height: 100rem;
 }
-.main_news .inner .news_box .news .icon {
-  padding: 10rem 15rem;
-  background: #fff;
-  border: 2rem solid #1A1A1A;
-  border-radius: 8rem;
-  font-size: 16rem;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.main_news .inner .news_box .news img {
+  width: 40rem;
+  height: 40rem;
 }
 .main_news .inner .news_box .news .check {
   font-size: 26rem;
@@ -648,6 +642,16 @@ em, i, address {
   display: flex;
   flex-direction: column;
   gap: 5rem;
+}
+.main_news .inner .news_box .news p span {
+  font-size: 12rem;
+  font-weight: 400;
+  color: #8b95a1;
+}
+.main_news .inner .news_box .news p strong {
+  font-size: 15rem;
+  font-weight: 500;
+  color: #4e5968;
 }
 
 .main_login {
@@ -692,6 +696,7 @@ em, i, address {
   font-weight: 500;
   color: #8b95a1;
   padding: 10rem 15rem;
+  position: relative;
 }
 .ft_top .inner .custom li strong {
   color: #4e5968;
@@ -701,6 +706,16 @@ em, i, address {
 .ft_top .inner .custom li:hover {
   background: rgba(0, 0, 0, 0.05);
   border-radius: 8rem;
+}
+.ft_top .inner .custom li ~ li::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -5rem;
+  transform: translate(0, -50%);
+  width: 1rem;
+  height: 10rem;
+  background: #ddd;
 }
 .ft_top .inner .family {
   display: flex;

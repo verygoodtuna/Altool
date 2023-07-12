@@ -16,10 +16,30 @@ $(function () {
             disableOnInteraction: false,
         },
         slideActiveClass: 'on',
+        navigation: {
+            prevEl: '.page_btn .left',
+            nextEl: '.page_btn .right',
+        },
+        pagination: {
+            el: ".page_num",
+            type: "fraction",
+        },
     });
+
+    $('.main_egg .inner ul').slick({
+        slidesToShow: 8,
+    })
 
     const BannerSlide = new Swiper ('.banner_slide', {
         loop: true,
+        navigation: {
+            prevEl: '.page_btn .left',
+            nextEl: '.page_btn .right',
+        },
+        pagination: {
+            el: ".page_num2",
+            type: "fraction",
+        },
     });
 
     $('.footer .family').on('click', function () {
