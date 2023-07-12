@@ -70,3 +70,25 @@
 
     }
 }
+
+@media (max-width: 768px) {
+    .main_product {
+        padding: 25rem 0;
+
+        .inner {
+            padding: 0 25rem;
+            
+            h3 {
+                font-size: 20rem;
+                font-weight: 500;
+                margin-bottom: 25rem;
+            }
+
+            .egg_plate {
+                display: grid;
+                grid-template-columns: repeat(2, 4fr);
+                gap: 20rem 15rem;
+            }
+        }
+    }
+}

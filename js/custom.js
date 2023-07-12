@@ -38,6 +38,7 @@ $(function () {
 
     $('.main_egg .inner ul').slick({
         slidesToShow: 8,
+        infinite: true,
         responsive: [
             {
                 breakpoint: 768,
@@ -49,7 +50,7 @@ $(function () {
         ]
     })
 
-    
+
 
     const BannerSlide = new Swiper ('.banner_slide', {
         loop: true,
