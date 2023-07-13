@@ -180,7 +180,8 @@ em, i, address {
   visibility: visible;
 }
 .header .inner .gnb > ul > li:hover .lnb {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 .header .inner .gnb > ul > li .list {
   display: none;
@@ -656,7 +657,7 @@ em, i, address {
   padding: 0 40rem;
 }
 .main_egg .inner ul li {
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.25), 0 0 20rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.25), 0 3rem 9rem rgba(0, 0, 0, 0.15);
   border-radius: 10rem;
   flex-basis: 100%;
   margin: 10rem;
@@ -702,7 +703,7 @@ em, i, address {
   }
   .main_egg .inner ul li {
     margin: 5rem;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.25), 0 0 8rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.25), 0 2rem 8rem rgba(0, 0, 0, 0.15);
   }
   .main_egg .inner ul li a {
     flex-direction: column;
