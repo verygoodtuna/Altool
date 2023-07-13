@@ -19,6 +19,7 @@
             .news {
                 display: flex;
                 align-items: center;
+                justify-content: center;
                 gap: 20rem;
                 background: $color-white;
                 border-radius: 10rem;
@@ -59,12 +60,26 @@
 
 @media (max-width: 768px) {
     .main_news {
-
+        position: relative;
         .inner {
+            padding: 0 20rem;
+            //position: fixed;
+            background: url(../imges/mn_r01.png)no-repeat center center/cover;
+            min-height: 500rem;
 
-            ul {
+            .news_box {
                 flex-direction: column;
+                display: grid;
+                grid-template-columns: repeat(1, 3fr);
+                width: 100%;
+                text-align-last: left;
+                padding: 0 20rem;
+
+                .news {
+                    justify-content: flex-start;
+                }
             }
+           
         }
     }
 }

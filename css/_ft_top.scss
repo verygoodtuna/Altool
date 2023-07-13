@@ -100,14 +100,14 @@
 
 @media (max-width: 768px) {
     .ft_top {
-
         .inner {
             padding: 10rem 0;
             flex-direction: column;
+            //align-items: flex-start;
     
             .custom {
-                display: flex;
-                flex-direction: column;
+                display: grid;
+                text-align: center;
             }
     
             .family {

@@ -3,16 +3,12 @@
     position: relative;
 
     .banner_slide {
-        
+        border-radius: 25rem;
         overflow-x: hidden;
         position: relative;
 
         .swiper-wrapper {
             height: 400rem;
-
-            .banner {
-                border-radius: 25rem;
-            }
 
             .banner01 {
                 background: url(../imges/mba01.png)no-repeat center center/cover;
@@ -118,7 +114,7 @@
         max-width: 1200rem;
         margin: 0 auto;
         padding: 8rem 15rem;
-        z-index: 999;
+        z-index: 998;
         width: 65rem;
 
         display: flex; 
@@ -128,4 +124,59 @@
         background: rgba(0,0,0,.1);
         border-radius: 50rem;
     }
+}
+
+@media (max-width: 768px) {
+    .main_banner {
+        padding: 25rem 20rem;
+
+        .banner_slide {
+            .swiper-wrapper {
+                height: 300rem;
+    
+                .banner01 {
+                    background: url(../imges/mba_r01.png)no-repeat center bottom/cover;
+                }
+                
+                .banner02 {
+                    background: url(../imges/mba_r02.png)no-repeat center center/cover;
+                }
+                .banner03 {
+                    background: url(../imges/mba_r03.png)no-repeat center center/cover;
+                }
+
+                .txt {
+                    top: 30%;
+                    text-align: left;
+                    span {
+                        font-size: 12rem;
+                        padding: 10rem 15rem;
+                    }
+
+                    h3 {
+                        font-size: 16rem;
+                        font-weight: 500;
+                    }
+
+                    p {
+                        font-size: 12rem;
+                        font-weight: 300;
+                    }
+
+                    strong {
+                        font-size: 10rem;
+                    }
+                }
+            }
+        } 
+
+        .page_btn {
+            display: none;
+        }
+    
+        .page_num02 {
+            bottom: 15%;
+        }
+    }
+   
 }

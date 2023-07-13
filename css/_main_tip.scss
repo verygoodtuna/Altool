@@ -80,3 +80,45 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .main_tip {
+        padding: 25rem 0;
+
+        .inner {
+            padding: 0 20rem;
+
+            h3 {
+                font-size: 20rem;
+                font-weight: 500;
+            }
+
+            .tip_box {
+                grid-template-columns: repeat(1, 5fr);
+
+                .txt {
+                    padding: 25rem;
+                    min-height: 200rem;
+                    
+                    h4 {
+                        font-size: 16rem;
+                        line-height: 24rem;
+                    }
+
+                    p {
+                        font-size: 12rem;
+                        line-height: 16rem;
+                    }
+                }
+
+                span {
+                    font-size: 16rem;
+                    padding: 5rem;
+
+                    top: 25rem;
+                    right: 25rem;
+                }
+            }
+        }
+    }
+}
