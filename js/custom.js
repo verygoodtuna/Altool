@@ -7,6 +7,9 @@ $(function () {
             : $('.header').removeClass('on');
     });
 
+    // const body = document.getElementsByTagName('.gnb')[0];
+    // body.classList.add('scrollLock');
+
     $('.mobil_btn .btn').on('click', function (){
         $('.header .gnb').toggleClass('on');
         $('.header .login').toggleClass('on');

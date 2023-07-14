@@ -39,9 +39,32 @@
 
 @media (max-width: 768px) {
     .ft_bottom  {
+        padding: 20rem 20rem;
+
         .inner {
+            
+            .address {
+                white-space: nowrap;
+                font-size: 13rem;
+                font-weight: 300;
+            }
+
             .company {
-                flex-direction: column;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 10rem;
+
+
+                li {
+                    font-size: 13rem;
+                    font-weight: 300;
+                    position: inherit;
+                }
+
+                li~li::before {
+                    display: none;
+                }
             }
         }
     }
