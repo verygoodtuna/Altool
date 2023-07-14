@@ -315,6 +315,7 @@ em, i, address {
   .header .inner .gnb ul > li .lnb .lnb_box .l_top {
     flex-direction: column;
     gap: 10rem;
+    margin-bottom: 10rem;
   }
   .header .inner .gnb ul > li .lnb .lnb_box .l_top .egg {
     margin-bottom: 5rem;
@@ -507,7 +508,7 @@ em, i, address {
     border-radius: 15rem;
   }
   .main_major .major_slide .swiper-wrapper {
-    height: calc(100vh - 200rem);
+    height: 500rem;
   }
   .main_major .major_slide .swiper-wrapper .major01 {
     background: url(../imges/me_r01.png) no-repeat center center/cover;
@@ -966,6 +967,13 @@ em, i, address {
     display: grid;
     grid-template-columns: repeat(2, 4fr);
     gap: 20rem 15rem;
+  }
+  .main_product .inner .egg_plate .egg .txt h4 {
+    font-size: 4vw;
+  }
+  .main_product .inner .egg_plate .egg .txt p {
+    font-size: 3vw;
+    line-height: 4vw;
   }
 }
 .main_tip {
