@@ -280,11 +280,12 @@ em, i, address {
     position: fixed;
     top: 0;
     bottom: 0;
-    right: -100%;
+    right: 0;
     width: 100%;
     background: #fff;
     transition: 0.5s;
     overflow-y: auto;
+    display: none;
   }
   .header .inner .gnb ul {
     display: flex;
@@ -306,8 +307,8 @@ em, i, address {
     width: auto;
     position: static;
     transform: translate(0, 0);
-    height: auto;
     box-shadow: none;
+    background: #fff;
     display: none;
   }
   .header .inner .gnb ul > li .lnb .lnb_box {
@@ -384,7 +385,7 @@ em, i, address {
     padding: 15rem 0;
   }
   .header .inner .gnb.on {
-    right: 0;
+    display: block;
   }
   .header .mobil_btn {
     position: absolute;
