@@ -311,3 +311,39 @@ Warning:
 .inner {
     // @include inner();
 }
+
+.lnb
+width: 100%;
+                            z-index: 1000;
+                            box-shadow: none;
+                            padding: 0;
+                            opacity: 0;
+                            visibility: hidden;
+
+                            display: block;
+.lnb_top
+                                flex-direction: column;
+
+                                .egg 
+                                margin-bottom: 0;
+
+                                .lnb_bottom 
+                                flex-direction: column;
+                                width: 100%;
+                                img {
+                                    display: none;
+                                }
+
+                                .login
+                                position: absolute;
+                top: 100rem;
+                left: 20rem;
+                right: 20rem;
+                z-index: 999;
+                display: none;
+                width: 100%;
+
+                absolutedisplay: flex;
+                        justify-content: center;
+                        align-items: center;
+                        //padding: 15rem 0;

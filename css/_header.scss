@@ -31,17 +31,16 @@
         .gnb {
             &>ul {
             display: flex;
-            text-align: left;
+            justify-content: space-between;
             gap: 30rem;
-            height: 100rem;
                 
                 &>li {
                     font-size: 15rem;
                     font-weight: 500;
                     color: $color-black;
                     position: relative;
-                    height: 100rem;
-                    display: flex;
+                    height: 100%;
+                    //display: flex;
                     align-items: center; 
 
                     &>a {
@@ -58,94 +57,98 @@
                        visibility: hidden;
                        
                        position: absolute;
-                       top: 75rem;
+                       top: 30rem;
                        left: 0;
-                       //width: 800rem; 
-                       width: 800rem;
+                       transform: translate(0, 0);
+                       width: 550%;
                        background: $color-white; 
                        border-radius: 10rem;   
-                        padding: 30rem 30rem 30rem 30rem;
-                       z-index: 999;
+                       //z-index: 999;
                         box-shadow: 0 0 1px rgba(0,0,0,.25),
                         0 8px 20px rgba(0,0,0,.15);
-                        
 
-                        .l_top {
+                        .lnb_box {
+                            padding: 30rem 30rem 30rem 30rem;
                             display: flex;
-                            justify-content: space-between;
-                            margin-bottom: 30rem;
+                            flex-direction: column;
 
-                            h3 {
-                                font-size: 12rem;
-                                font-weight: 500;
-                                color: $color-gray;
-                                margin: 0 0 10rem 15rem;
-                            }
-
-                            .security {
-                                margin-top: 60rem;
-                            }
-
-                            .egg {
+                            .l_top {
                                 display: flex;
-                                gap: 10rem;
-                                margin-bottom: 10rem;
-                                padding: 10rem 15rem;
-
-                                img {
-                                    width: 40rem;
-                                    height: 40rem;
-                                    border-radius: 8rem;
+                                justify-content: space-between;
+                                margin-bottom: 30rem;
+    
+                                h3 {
+                                    font-size: 12rem;
+                                    font-weight: 500;
+                                    color: $color-gray;
+                                    margin: 0 0 10rem 15rem;
                                 }
-
-                                dl {
+    
+                                .security {
+                                    margin-top: 60rem;
+                                }
+    
+                                .egg {
                                     display: flex;
-                                    flex-direction: column;
-                                    justify-content: space-evenly;
-                                    height: 40rem;
-
-                                    dt {
-                                        font-size: 13rem;
-                                        font-weight: 500;
-                                        color: $color-black;
+                                    gap: 10rem;
+                                    margin-bottom: 10rem;
+                                    padding: 10rem 15rem;
+    
+                                    img {
+                                        width: 40rem;
+                                        height: 40rem;
+                                        border-radius: 8rem;
                                     }
-
-                                    dd {
+    
+                                    dl {
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: space-evenly;
+                                        height: 40rem;
+    
+                                        dt {
+                                            font-size: 13rem;
+                                            font-weight: 500;
+                                            color: $color-black;
+                                        }
+    
+                                        dd {
+                                            font-size: 12rem;
+                                            font-weight: 300;
+                                            color: $color-gray;
+                                        }
+                                    }
+                                
+                                }
+    
+                                .egg:hover {
+                                    background: rgba(0, 0, 0, 0.05);
+                                    border-radius: 10rem;
+                                }
+                            }
+        
+                            .l_bottom {
+                                background: linear-gradient(90deg,#ff6746,#ff477e);
+                                display: flex;  
+                                align-items: center;
+                                justify-content: center;
+                                border-radius: 8rem;
+                                padding: 25rem 0;
+                                &>a {
+                                    color: $color-white;
+                                    &>img {
+                                        width: 190rem;
+                                    }
+                                    &>span {
                                         font-size: 12rem;
                                         font-weight: 300;
-                                        color: $color-gray;
+                                        margin-left: 25rem;
                                     }
-                                }
-                            
-                            }
-
-                            .egg:hover {
-                                background: rgba(0, 0, 0, 0.05);
-                                border-radius: 10rem;
-                            }
-                        }
-    
-                        .l_bottom {
-                            height: 70rem;
-                            background: linear-gradient(90deg,#ff6746,#ff477e);
-                            display: flex;  
-                            align-items: center;
-                            justify-content: center;
-                            border-radius: 8rem;
-                            &>a {
-                                color: $color-white;
-                                &>img {
-                                    width: 190rem;
-                                }
-                                &>span {
-                                    font-size: 12rem;
-                                    font-weight: 300;
-                                    margin-left: 25rem;
-                                }
-                                &>strong {
-                                   font-size: 18rem;
-                                   font-weight: 500;
-                                   margin-left: 5rem;
+                                    &>strong {
+                                       font-size: 18rem;
+                                       font-weight: 500;
+                                       margin-left: 5rem;
+                                    }
                                 }
                             }
                         }
@@ -156,15 +159,32 @@
                         visibility: visible;
                     }
 
+                    &>li~li:not(:last-child)::before {
+                        content: "";
+                        position: absolute;
+                        top: -50rem;
+                        left: 50%;
+                        transform: translate(-50%, 0);
+                        width: calc(100% - 40rem);
+                        height: 1rem;
+                        background: $color-gray;
+    
+                        z-index: 999;
+                    }
+
                 &:hover .lnb {
-                    opacity: 1;
-                    visibility: visible;
+                   opacity: 1;
+                   visibility: visible;
                 }
+
+               
                     
                     .list {
-                        display: none;
+                        opacity: 0;
+                        visibility: hidden;
+
                         position: absolute;
-                        top: 75rem;
+                        top: 30rem;
                         left: 0;
                         z-index: 999;
 
@@ -195,11 +215,13 @@
                     }
 
                     .list.on {
-                        display: block;
+                        opacity: 1;
+                        visibility: visible;
                     }
 
                     &:hover .list {
-                        display: block;
+                        opacity: 1;
+                        visibility: visible;
                     }
                 }
             }
@@ -211,7 +233,7 @@
             right: 60rem;
             transform: translate(0, -50%);
 
-            .log {
+            span {
                 background: $color-black;
                 color: $color-white;
                 font-size: 16rem;
@@ -246,6 +268,7 @@
 
         .inner {
             justify-content: space-between;
+            padding: 0 20rem;
 
             h1 {
 
@@ -263,99 +286,134 @@
 
             .gnb {
                 position: fixed;
-                top: -400rem;
+                top: 0;
                 bottom: 0;
-                left: 0;
-                right: 0;
+                right: -100%;
+                //right: 0;
                 width: 100%;
                 background: $color-white;
                 transition: 0.5s;
 
-                min-height: 100vh;
-                z-index: 998;
-                opacity: 0;
-                visibility: hidden;
+                //min-height: 100vh;
+                //z-index: 998;
                 overflow-y: auto;
-
+                
                 ul {
                     display: flex;
                     flex-direction: column;
                     align-items: start;
-                    padding: 150rem 20rem 0 20rem;
+                    padding: 150rem 0 0 0;
+                    gap: 10rem;
 
                     &>li {
-                        flex-direction: column;
-                        text-align: left;
-                        height: auto;
                         position: relative;
+                        padding: 0 20rem 0 20rem;
+                        width: 100%;
+                        a {
+                            display: block;
+                            align-items: center;
+                        }
 
                         .lnb {
-                            width: 100%;
-                            z-index: 1000;
+                            width: auto;
+                            position: static;
+                            transform: translate(0, 0);
+                            height: auto;
                             box-shadow: none;
-                            padding: 0;
-                            opacity: 0;
-                            visibility: hidden;
 
-                            //display: block;
+                            display: none;
+                            .lnb_box {
+                                padding: 10rem 0;
+                                display: block;
+                                .l_top {
+                                    flex-direction: column;
+                                    gap: 10rem;
+
+                                    .egg {
+                                        margin-bottom: 5rem;
+                                    }
+                                    
+                                    .security {
+                                        margin-top: 5rem;
+                                    }
+                                }
+        
+                                .l_bottom {
+                                    justify-content: flex-start;
+                                    img {
+                                        display: none;
+                                    }
+                                }
+                            }
                             
-                            .l_top {
-                                flex-direction: column;
-                                
-                                .egg {
-                                    margin-bottom: 0;
-                                }
-                                
-                            }
-    
-                            .l_bottom {
-                                flex-direction: column;
-                                width: 100%;
-                                img {
-                                    display: none;
-                                }
-                            }
                         }
     
                         .lnb.on {
-                           opacity: 1;
-                           visibility: visible;
+                           display: block;
                         }
+
+                        .list {
+                            position: static;
+                            transform: translate(0, 0);
+                            box-shadow: none;
+                            display: none;
+                            width: 100%;
+                            li {
+                                padding: 0;
+                                a{
+                                    padding: 0;
+                                }
+                            }
+
+                            li:not(:last-child)::before {
+                                display: none;
+                            }
+                        }
+
+                        .list.on {
+                            display: block;
+                        }
+
+                    }
+
+                    &>li:not(:last-child)::before {
+                        content: "";
+                        position: absolute;
+                        bottom: -5rem;
+                        left: 50%;
+                        transform: translate(-50%, 0);
+                        width: calc(100% - 60rem);
+                        height: 1rem;
+                        background: #ddd;
+    
+                        z-index: 999;
                     }      
+                }
+
+                .login {
+                    position: absolute;
+                    top: 10%;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    width: 100%;
+                    padding: 0 20rem;
+
+                    span{
+                        display: block;
+                        text-align: center;
+                        color: $color-white;
+                        background: $color-black;
+                        border-radius: 10rem;
+                        padding: 15rem 0;
+                    }
                 }
             }
 
             .gnb.on {
-                opacity: 1;
-                visibility: visible;
-
-                top: 0;
-                
+                right: 0;
             }
 
-            .login {
-                position: absolute;
-                top: 100rem;
-                left: 20rem;
-                right: 20rem;
-                z-index: 999;
-                display: none;
-                width: 100%;
-
-                .log {
-
-                    a {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        //padding: 15rem 0;
-                    }
-                }
-                
-            }
-            .login.on {
-                display: block;
-            }
+            
         }
 
         .mobil_btn {
