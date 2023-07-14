@@ -82,11 +82,11 @@ $(function () {
     })
 
 
-    $('.gnb').on('wheel', function (e) {
-        if ($('.gnb').hasClass('on')) {
-            e.preventDefault();
-        }
-    })
+    // $('.gnb').on('wheel', function (e) {
+    //     if ($('.gnb').hasClass('on')) {
+    //         e.preventDefault();
+    //     }
+    // })
 
     $(window).on('resize', function () {
         $('.gnb').removeClass('on')
