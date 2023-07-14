@@ -91,19 +91,19 @@ $(function () {
     //     }
     // })
 
-    $(window).on('resize', function () {
-        $('.gnb').removeClass('on')
-    });
+    // $(window).on('resize', function () {
+    //     $('.gnb').removeClass('on')
+    // });
 
-    $('.gnb ul>li>a').on('click', function (e) {
-        if ($('.gnb').hasClass('on')) {
+    // $('.gnb ul>li>a').on('click', function (e) {
+    //     if ($('.gnb').hasClass('on')) {
 
-            //서버메뉴가 없으면 바로 클릭되게 하기
-            if ($(this).next().size() != 0) {
-                e.preventDefault();
-            }
-            $(this).next().stop().slideToggle();
-            $(this).parent().siblings().find('.lnb').stop().slideUp();
-        }
-    });
+    //         //서버메뉴가 없으면 바로 클릭되게 하기
+    //         if ($(this).next().size() != 0) {
+    //             e.preventDefault();
+    //         }
+    //         $(this).next().stop().slideToggle();
+    //         $(this).parent().siblings().find('.lnb').stop().slideUp();
+    //     }
+    // });
 })
