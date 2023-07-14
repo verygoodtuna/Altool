@@ -90,7 +90,7 @@
         }
 
         .page_num {
-            width: 40rem;
+            width: 27rem;
             font-size: 13rem;
             font-weight: 400;
             color: $color-black;
@@ -184,6 +184,7 @@
 
         .page_btn {
             justify-content: center;
+            bottom: 5%;
         }
     }
 }

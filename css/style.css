@@ -284,7 +284,7 @@ em, i, address {
     width: 100%;
     background: #fff;
     transition: 0.5s;
-    overflow-y: auto;
+    overflow-y: scroll;
     display: none;
   }
   .header .inner .gnb ul {
@@ -477,7 +477,7 @@ em, i, address {
   color: #1A1A1A;
 }
 .main_major .page_btn .page_num {
-  width: 40rem;
+  width: 27rem;
   font-size: 13rem;
   font-weight: 400;
   color: #1A1A1A;
@@ -553,6 +553,7 @@ em, i, address {
   }
   .main_major .page_btn {
     justify-content: center;
+    bottom: 5%;
   }
 }
 .main_banner {
@@ -681,6 +682,7 @@ em, i, address {
   }
   .main_banner .banner_slide .swiper-wrapper .txt {
     top: 30%;
+    left: 54%;
     text-align: left;
   }
   .main_banner .banner_slide .swiper-wrapper .txt span {
@@ -703,6 +705,7 @@ em, i, address {
   }
   .main_banner .page_num02 {
     bottom: 15%;
+    left: 18%;
   }
 }
 .main_egg {

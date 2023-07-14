@@ -7,9 +7,6 @@ $(function () {
             : $('.header').removeClass('on');
     });
 
-    // const body = document.getElementsByTagName('.gnb')[0];
-    // body.classList.add('scrollLock');
-
     $('.mobil_btn .btn').on('click', function (){
         $('.header .gnb').toggleClass('on');
         $('.header .login').toggleClass('on');
@@ -28,11 +25,12 @@ $(function () {
         parallax: true,
         speed: 1000,
         autoplay: {
-            delay: 4000,
+            delay: 3000,
             disableOnInteraction: false,
             autoplayStart: '.page_play .play',
-            autoplayStop: '.page_play .pause',
+            autoplayPause: '.page_play .pause',
         },
+
         slideActiveClass: 'on',
         navigation: {
             prevEl: '.page_btn .left',
@@ -44,13 +42,7 @@ $(function () {
         },
     });
 
-    $('.page_btn .page_play span::before').on('click', function () {
-        $('.page_btn .page_play span::before').addClass('on')
-    })
-
-    $('.page_play span::before').on('click', function () {
-        $('.page_play span::after').addClass('on')
-    })
+    
 
     $('.main_egg .inner ul').slick({
         slidesToShow: 8,
@@ -65,8 +57,6 @@ $(function () {
             }
         ]
     })
-
-
 
     const BannerSlide = new Swiper ('.banner_slide', {
         loop: true,
@@ -85,25 +75,24 @@ $(function () {
     })
 
 
-    // $('.gnb').on('wheel', function (e) {
-    //     if ($('.gnb').hasClass('on')) {
-    //         e.preventDefault();
-    //     }
-    // })
+    $('.gnb').on('wheel', function (e) {
+        if ($('.gnb .lnb').hasClass('on')) {
+            
+        }
+        else {
+            e.preventDefault();
+        }
+    })
 
-    // $(window).on('resize', function () {
-    //     $('.gnb').removeClass('on')
-    // });
+    $('.gnb ul>li>a').on('click', function (e) {
+        if ($('.gnb').hasClass('on')) {
 
-    // $('.gnb ul>li>a').on('click', function (e) {
-    //     if ($('.gnb').hasClass('on')) {
-
-    //         //서버메뉴가 없으면 바로 클릭되게 하기
-    //         if ($(this).next().size() != 0) {
-    //             e.preventDefault();
-    //         }
-    //         $(this).next().stop().slideToggle();
-    //         $(this).parent().siblings().find('.lnb').stop().slideUp();
-    //     }
-    // });
+            //서버메뉴가 없으면 바로 클릭되게 하기
+            if ($(this).next().size() != 0) {
+                e.preventDefault();
+            }
+            $(this).next().stop().slideToggle();
+            $(this).parent().siblings().find('.lnb').stop().slideUp();
+        }
+    });
 })
