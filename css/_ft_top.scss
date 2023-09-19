@@ -68,7 +68,6 @@
                 box-shadow: 
                 0 0 1px rgba(0,0,0,.25),
                 0 8px 20px rgba(0,0,0,.15);
-                ;
 
                 display: none;
                 li {
@@ -100,7 +99,7 @@
 
 @media (max-width: 768px) {
     .footer {
-        padding: 30rem 0 40rem 0;
+        padding: 30rem 0 60rem 0;
         position: relative;
     }
 
@@ -108,7 +107,7 @@
         padding: 0 20rem;
 
         .inner {
-            padding: 10rem 0;
+            //padding: 10rem 0;
             flex-direction: column;
             //align-items: flex-start;
             
@@ -116,13 +115,17 @@
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
-                gap: 8rem;
+                gap: 0;
                 text-align: left;
 
                 li {
-                    font-size: 13rem;
+                    font-size: 12rem;
                     font-weight: 300;
-                    padding: 10rem 15rem 0 0;
+                    padding: 6rem 15rem 0 0;
+
+                    strong {
+                        font-size: 13rem;
+                    }
                 }
 
                 li:hover {
@@ -136,14 +139,19 @@
     
             .family {
                 position: absolute;
-                bottom: 10rem;
-                left: 14%;
-                transform: translate(-50%, 0);
+                bottom: 30rem;
+                left: 20rem;
+                transform: translate(0, 0);
+                padding: 0;
 
                 .family_list {
-                    right: -40%;
+                    right: -70%;
                     z-index: 999;
                 }
+            }
+
+            .family:hover {
+                background: transparent;
             }
         }
         

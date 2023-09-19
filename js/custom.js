@@ -95,4 +95,8 @@ $(function () {
             $(this).parent().siblings().find('.lnb').stop().slideUp();
         }
     });
+
+    $('.login_impor .check').on('click', function () {
+        $(this).toggleClass('on')
+    })
 })

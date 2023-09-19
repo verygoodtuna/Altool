@@ -1166,6 +1166,7 @@ em, i, address {
 }
 .main_login {
   padding: 100rem 0;
+  background: #fcfcfc;
 }
 .main_login .inner {
   max-width: 1200rem;
@@ -1173,14 +1174,171 @@ em, i, address {
   padding: 0 15rem;
   position: relative;
   height: calc(100vh - 403rem);
+  max-width: 430rem;
 }
-.main_login .inner .login_box {
+.main_login .login_box {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   width: 100%;
+  padding: 0 15rem;
+  top: 60%;
+}
+.main_login .login_box h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 28px 0;
+}
+.main_login .login_box .login {
+  margin: 0 auto;
+  width: 100%;
+}
+.main_login .login_box .login .id {
+  margin: 0 0 10px 0;
+}
+.main_login .login_box .login .ps {
+  margin: 0 0 20px 0;
+  position: relative;
+}
+.main_login .login_box .login .ps span {
+  position: absolute;
+  top: 50%;
+  right: 20rem;
+  transform: rotateX(180deg) translate(0, 50%);
+  color: #8b95a1;
+}
+.main_login .login_box .login .ps span i {
+  font-size: 20rem;
+}
+.main_login .login_box .login input {
+  width: 400rem;
+  height: 50rem;
+  border-radius: 10rem;
+  border: 1px solid #eee;
+  outline: none;
+  padding: 0 0 0 24px;
+}
+.main_login .login_box .login input:pocus {
+  outline: 1px solid #ff2c45;
+}
+.main_login .login_box .login ::-moz-placeholder {
+  font-family: "Noto Sans KR";
+  font-size: 14rem;
+  font-weight: 400;
+  color: #8b95a1;
+}
+.main_login .login_box .login ::placeholder {
+  font-family: "Noto Sans KR";
+  font-size: 14rem;
+  font-weight: 400;
+  color: #8b95a1;
+}
+.main_login .login_box .login .login_impor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14rem;
+  font-weight: 400;
+  color: #1A1A1A;
+  margin: 0 0 42rem 0;
+}
+.main_login .login_box .login .login_impor .check {
+  font-size: 16rem;
+  color: transparent;
+  padding: 2rem;
+  border-radius: 5rem;
+  border: 1px solid #eee;
+}
+.main_login .login_box .login .login_impor .check.on {
+  background: #08f;
+  color: #fff;
+  border: 1px solid transparent;
+}
+.main_login .login_box .login .login_impor span {
+  display: inline-block;
+  margin: 0 0 0 6px;
+}
+.main_login .login_box .login .login_impor ul {
+  display: flex;
+  gap: 6rem;
+}
+.main_login .login_box .login .login_btn {
+  font-size: 14rem;
+  font-weight: 500;
+  margin: 0 0 42rem 0;
+}
+.main_login .login_box .login .login_btn span {
+  display: block;
+  width: 100%;
+  background: #1A1A1A;
+  color: #fff;
+  padding: 16rem 0;
+  border-radius: 10rem;
+  margin: 0 0 24rem 0;
+}
+.main_login .login_box .login .login_btn strong {
+  color: #08f;
+  font-weight: 700;
+  font-size: 15rem;
+}
+.main_login .login_box .login .login_sns {
+  position: relative;
+}
+.main_login .login_box .login .login_sns h3 {
+  font-size: 16rem;
+  font-weight: 500;
+  color: #8b95a1;
+  background: #fcfcfc;
+  padding: 0 8rem;
+  display: inline-block;
+  z-index: 998;
+  margin: 0 0 32rem 0;
+}
+.main_login .login_box .login .login_sns h3::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 0;
+  transform: translate(0, -50%);
+  width: 100%;
+  height: 1.5rem;
+  background: #c2c2c2;
+  z-index: -1;
+}
+.main_login .login_box .login .login_sns ul {
+  display: flex;
+  justify-content: center;
+  gap: 32rem;
+}
+.main_login .login_box .login .login_sns ul li {
+  font-size: 24rem;
+  border-radius: 50%;
+  background: #fff;
+  color: #fff;
+  width: 50rem;
+  height: 50rem;
+}
+.main_login .login_box .login .login_sns ul li i {
+  padding: 12rem 0 0 0;
+}
+.main_login .login_box .login .login_sns ul li img {
+  width: 24rem;
+  padding: 12rem 0 0 0;
+}
+.main_login .login_box .login .login_sns ul li:nth-child(1) {
+  background: #03C75A;
+}
+.main_login .login_box .login .login_sns ul li:nth-child(2) {
+  background: #FEE500;
+  color: #302A00;
+}
+.main_login .login_box .login .login_sns ul li:nth-child(3) {
+  border: 1px solid #eee;
+}
+.main_login .login_box .login .login_sns ul li:nth-child(4) {
+  background: #1A1A1A;
 }
 
 .footer {
@@ -1268,27 +1426,29 @@ em, i, address {
 
 @media (max-width: 768px) {
   .footer {
-    padding: 30rem 0 40rem 0;
+    padding: 30rem 0 60rem 0;
     position: relative;
   }
   .ft_top {
     padding: 0 20rem;
   }
   .ft_top .inner {
-    padding: 10rem 0;
     flex-direction: column;
   }
   .ft_top .inner .custom {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 8rem;
+    gap: 0;
     text-align: left;
   }
   .ft_top .inner .custom li {
-    font-size: 13rem;
+    font-size: 12rem;
     font-weight: 300;
-    padding: 10rem 15rem 0 0;
+    padding: 6rem 15rem 0 0;
+  }
+  .ft_top .inner .custom li strong {
+    font-size: 13rem;
   }
   .ft_top .inner .custom li:hover {
     display: none;
@@ -1298,13 +1458,17 @@ em, i, address {
   }
   .ft_top .inner .family {
     position: absolute;
-    bottom: 10rem;
-    left: 14%;
-    transform: translate(-50%, 0);
+    bottom: 30rem;
+    left: 20rem;
+    transform: translate(0, 0);
+    padding: 0;
   }
   .ft_top .inner .family .family_list {
-    right: -40%;
+    right: -70%;
     z-index: 999;
+  }
+  .ft_top .inner .family:hover {
+    background: transparent;
   }
 }
 .ft_middle {
@@ -1341,7 +1505,16 @@ em, i, address {
 
 @media (max-width: 768px) {
   .ft_middle {
-    padding: 15rem 20rem;
+    padding: 10rem 20rem;
+  }
+  .ft_middle .inner {
+    gap: 20rem;
+  }
+  .ft_middle .inner ul {
+    gap: 8rem;
+  }
+  .ft_middle .inner ul li {
+    font-size: 16rem;
   }
 }
 .ft_bottom {
@@ -1380,21 +1553,21 @@ em, i, address {
 
 @media (max-width: 768px) {
   .ft_bottom {
-    padding: 20rem 20rem;
+    padding: 0 20rem;
   }
   .ft_bottom .inner .address {
-    white-space: nowrap;
-    font-size: 13rem;
+    font-size: 12rem;
     font-weight: 300;
+    margin-bottom: 6rem;
   }
   .ft_bottom .inner .company {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 10rem;
+    gap: 6rem;
   }
   .ft_bottom .inner .company li {
-    font-size: 13rem;
+    font-size: 12rem;
     font-weight: 300;
     position: inherit;
   }
